@@ -1,0 +1,43 @@
+{
+  "source_papers": 751,
+  "dataset_splits": {
+    "reward_model": {
+      "records": 5055,
+      "format": "section_text + scalar_score 0-10"
+    },
+    "dpo_pairs": {
+      "records": 426,
+      "format": "chosen vs rejected per section"
+    },
+    "sft_dataset": {
+      "records": 1649,
+      "format": "instruction \u2192 full paper or section"
+    },
+    "system_qa": {
+      "records": 10,
+      "format": "platform knowledge Q&A"
+    }
+  },
+  "section_avg_scores": {
+    "abstract": 6.29,
+    "introduction": 6.23,
+    "methodology": 5.85,
+    "results": 5.32,
+    "discussion": 5.31,
+    "conclusion": 5.08,
+    "references": 4.94
+  },
+  "score_distribution": {
+    "mean": 5.64,
+    "median": 5.7,
+    "stdev": 1.472,
+    "min": 0.6,
+    "max": 9
+  },
+  "reward_tiers": {
+    "gold (>=7.5)": 228,
+    "good (6.0-7.5)": 1997,
+    "average (4.5-6.0)": 1729,
+    "poor (<4.5)": 1101
+  }
+}
