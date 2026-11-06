@@ -1,5 +1,6 @@
 {
-  "source_papers": 751,
+  "source_papers": 744,
+  "reward_model_papers": 743,
   "dataset_splits": {
     "reward_model": {
       "records": 5055,
@@ -7,7 +8,7 @@
     },
     "dpo_pairs": {
       "records": 426,
-      "format": "chosen vs rejected per section"
+      "format": "chosen vs rejected, same section type, different papers"
     },
     "sft_dataset": {
       "records": 1649,
@@ -18,26 +19,42 @@
       "format": "platform knowledge Q&A"
     }
   },
+  "judges_per_paper": {
+    "papers": 743,
+    "min": 2,
+    "max": 14,
+    "median": 9,
+    "share_7_to_12": 0.852
+  },
   "section_avg_scores": {
-    "abstract": 6.29,
-    "introduction": 6.23,
-    "methodology": 5.85,
-    "results": 5.32,
-    "discussion": 5.31,
-    "conclusion": 5.08,
-    "references": 4.94
+    "abstract": 6.28,
+    "introduction": 5.9,
+    "methodology": 5.64,
+    "results": 5.05,
+    "discussion": 5.09,
+    "conclusion": 4.81,
+    "references": 4.9
+  },
+  "section_score_distribution": {
+    "basis": "score, one value per reward_model record",
+    "mean": 5.38,
+    "median": 5.7,
+    "stdev": 1.686,
+    "min": 0,
+    "max": 9.1
   },
   "score_distribution": {
-    "mean": 5.64,
+    "basis": "overall_score, one value per paper in reward_model",
+    "mean": 5.67,
     "median": 5.7,
-    "stdev": 1.472,
-    "min": 0.6,
+    "stdev": 1.427,
+    "min": 0.8,
     "max": 9
   },
   "reward_tiers": {
     "gold (>=7.5)": 228,
     "good (6.0-7.5)": 1997,
-    "average (4.5-6.0)": 1729,
-    "poor (<4.5)": 1101
+    "average (4.0-6.0)": 2117,
+    "poor (<4.0)": 713
   }
 }
